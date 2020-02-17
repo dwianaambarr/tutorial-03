@@ -56,7 +56,7 @@ public class MovieController {
 	}
 	
 	@RequestMapping("/movie/update/{id}/duration/{duration}")
-	public String addDuration(@PathVariable String id, @PathVariable Integer duration, Model model) {
+	public String updateDuration(@PathVariable String id, @PathVariable Integer duration, Model model) {
 		MovieModel archive=movieService.getMovieDetail(id);
 		if(archive != null) {
 		int durasi = duration;
